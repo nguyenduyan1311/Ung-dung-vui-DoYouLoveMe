@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    h1{
+        position:absolute;
+    }
+    #yes{
+        position:absolute;
+    }
+    #no{
+        position: absolute;
+    }
+</style>
+<body onload="onLoad()">
+<h1 id="h1">Do you love me?</h1>
+<input type="button" id="yes" value="Yes" onclick="yes()">
+<input type="button" id="no" value="No" onmouseover="no()">
+<script>
+    function onLoad(){
+        let x = Math.round(window.innerWidth / 3);
+        let y = Math.round(window.innerHeight / 3);
+        document.getElementById('h1').style.left = x + 'px';
+        document.getElementById('h1').style.top = y + 'px';
+        document.getElementById('yes').style.left = (x + 30) + 'px';
+        document.getElementById('yes').style.top = (y + 70) + 'px';
+        document.getElementById('no').style.left = (x + 130) + 'px';
+        document.getElementById('no').style.top = (y + 70) + 'px';
+    }
+    function yes()
+    {
+        alert("<3");
+    }
+    function no()
+    {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('no').style.left = (x - 5) + 'px';
+        document.getElementById('no').style.top = (y - 10) + 'px';
+    }
+</script>
+</body>
+</html>
